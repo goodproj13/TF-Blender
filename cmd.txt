@@ -1,0 +1,8 @@
+python tools/test.py configs/vid/dff/dff_faster_rcnn_r101_dc5_1x_imagenetvid.py --checkpoint checkpoints/dff_faster_rcnn_r101_dc5_1x_imagenetvid_20201218_172720-ad732e17.pth--out results.pkl --eval bbox
+
+python tools/test.py configs/vid/fgfa/fgfa_faster_rcnn_r101_dc5_1x_imagenetvid.py --checkpoint checkpoints/fgfa_faster_rcnn_r101_dc5_1x_imagenetvid_20201219_011831-9c9d8183.pth --out results.pkl --eval bbox
+
+
+python tools/train.py configs/vid/selsa/selsa_faster_rcnn_r50_dc5_1x_imagenetvid.py --work-dir training_dir 
+
+python ./demo/demo_vid.py ./configs/vid/selsa/selsa_faster_rcnn_r101_dc5_1x_imagenetvid.py --input ${VIDEO_FILE} --checkpoint ../mmtrack_output/selsa_faster_rcnn_r101_dc5_1x_imagenetvid_20201218_172724-aa961bcc.pth --output ${OUTPUT} --show
