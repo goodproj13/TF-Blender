@@ -86,3 +86,15 @@ MMTracking is an open source project that welcome any contribution and feedback.
 We wish that the toolbox and benchmark could serve the growing research
 community by providing a flexible as well as standardized toolkit to reimplement existing methods
 and develop their own new video perception methods.
+
+## Citation
+
+If you find this repo useful for your research, please consider citing the paper
+```
+@article{cui2021tf,
+  title={TF-Blender: Temporal Feature Blender for Video Object Detection},
+  author={Cui, Yiming and Yan, Liqi and Cao, Zhiwen and Liu, Dongfang},
+  journal={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  year={2021}
+}
+```
