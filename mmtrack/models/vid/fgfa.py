@@ -349,12 +349,6 @@ class FGFA(BaseVideoDetector):
             ref_img_metas = ref_img_metas[0]
         x = self.extract_feats(img, img_metas, ref_img, ref_img_metas)
 
-        plt.figure()
-        plt.subplot(1,2,1)
-        plt.imshow(img.cpu().detach().numpy()[0,0,:,:])
-        plt.subplot(1,2,2)
-        plt.imshow(img.cpu().detach().numpy()[0,0,:,:])
-        plt.show()
         # Two stage detector
         if hasattr(self.detector, 'roi_head'):
             if proposals is None:

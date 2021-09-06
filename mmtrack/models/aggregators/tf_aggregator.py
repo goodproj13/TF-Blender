@@ -13,7 +13,7 @@ class TFBlenderAggregator(nn.Module):
                  kernel_size=3,
                  norm_cfg=None,
                  act_cfg=dict(type='ReLU')):
-        super(EmbedAggregator, self).__init__()
+        super(TFBlenderAggregator, self).__init__()
         assert num_convs > 0, 'The number of convs must be bigger than 1.'
         self.embed_convs = nn.ModuleList()
         for i in range(num_convs):
@@ -107,6 +107,3 @@ class TFBlenderAggregator(nn.Module):
         ada_weights = ada_weights.softmax(dim=0)
         agg_x = torch.sum(ref_x * ada_weights, dim=0, keepdim=True)
         return agg_x
-                                                                                                                                                                                                 125,1         Bot
-
-

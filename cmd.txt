@@ -5,4 +5,6 @@ python tools/test.py configs/vid/fgfa/fgfa_faster_rcnn_r101_dc5_1x_imagenetvid.p
 
 python tools/train.py configs/vid/selsa/selsa_faster_rcnn_r50_dc5_1x_imagenetvid.py --work-dir training_dir 
 
+python tools/test.py ./configs/vid/fgfa/fgfa_faster_rcnn_r101_dc5_1x_imagenetvid_tfblender.py --checkpoint ./checkpoints/latest.pth --out results.pkl --eval bbox
+
 python ./demo/demo_vid.py ./configs/vid/selsa/selsa_faster_rcnn_r101_dc5_1x_imagenetvid.py --input ${VIDEO_FILE} --checkpoint ../mmtrack_output/selsa_faster_rcnn_r101_dc5_1x_imagenetvid_20201218_172724-aa961bcc.pth --output ${OUTPUT} --show
